@@ -1,7 +1,7 @@
 import pygame
 from code.Cano import Cano
 from code.Chao import Chao
-from code.Const import IMAGEM_BACKGROUND, WIN_WIDHT, WIN_HEIGHT
+from code.Const import IMAGEM_BACKGROUND, WIN_WIDTH, WIN_HEIGHT
 from code.Passaro import Passaro
 
 pygame.font.init()
@@ -15,7 +15,7 @@ def desenhar_tela(tela, passaros, canos, chao, pontos):
         cano.desenhar(tela)
 
     texto = FONTE_PONTOS.render(f"Pontuação: {pontos}", 1, (255, 255, 255))
-    tela.blit(texto, (WIN_WIDHT - 10 - texto.get_width(), 10))
+    tela.blit(texto, (WIN_WIDTH - 10 - texto.get_width(), 10))
     chao.desenhar(tela)
     pygame.display.update()
 
@@ -24,7 +24,7 @@ def main():
     passaros = [Passaro(230, 350)]
     chao = Chao(730)
     canos = [Cano(700)]
-    tela = pygame.display.set_mode((WIN_WIDHT, WIN_HEIGHT))
+    tela = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
     pontos = 0
     relogio = pygame.time.Clock()
 

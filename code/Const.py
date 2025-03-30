@@ -1,7 +1,7 @@
 import os
 import pygame
 
-WIN_WIDHT = 500
+WIN_WIDTH = 500
 WIN_HEIGHT = 700
 
 IMAGEM_CANO = pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'pipe.png')))
